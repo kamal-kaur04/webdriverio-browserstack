@@ -18,7 +18,7 @@ const localConfig = {
       }
     },
   ],
-  specs: ['./tests/specs/local_test.js'],
+  specs: ['../tests/specs/local_test.js'],
 };
 
 exports.config = { ...baseConfig, ...localConfig };
