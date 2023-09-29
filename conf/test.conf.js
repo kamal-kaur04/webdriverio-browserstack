@@ -4,27 +4,17 @@ const parallelConfig = {
   maxInstances: 10,
   commonCapabilities: {
     'bstack:options': {
-      buildName: 'A11y WDIO - Mocha',
+      buildName: 'Wdio Sample - Mocha',
       source: 'webdriverio:sample-master:v1.0',
       buildIdentifier: '${BUILD_NUMBER}',
-      projectName: 'A11y WDIO - Mocha Project'
+      projectName: 'Wdio Sample - Mocha Project'
     }
   },
   services: [
     [
       'browserstack',
       {
-        // browserstackLocal: true, opts: { localIdentifier: 'ally_mocha' },
-        // accessibility: true,
-        accessibilityOptions: {
-          wcagVersion: 'wcag2a',
-          // includeTagsInTestingScope: ['again'],
-          // excludeTagsInTestingScope: ['again'],
-          includeIssueType: {
-            bestPractice: true,
-            needsReview: true
-          }
-        }
+        'browserstackLocal': true
       },
     ],
   ],
@@ -35,45 +25,8 @@ const parallelConfig = {
       'bstack:options': {
         os: 'Windows',
         osVersion: '10',
-        accessibility: 'true',
       },
-    },
-    // {
-    //   browserName: 'chrome',
-    //   browserVersion: '110',
-    //   'goog:chromeOptions' : {
-    //     args: ['--headless']
-    //   },
-    //   'bstack:options': {
-    //     accessibility: 'true',
-    //     os: 'OS X',
-    //     osVersion: 'Catalina',
-    //   },
-    // },
-    // {
-    //   browserName: 'safari',
-    //   browserVersion: 'latest',
-    //   'bstack:options': {
-    //     // accessibility: false,
-    //     os: 'OS X',
-    //     osVersion: 'Big Sur',
-    //   },
-    // },
-    // {
-    //   browserName: 'firefox',
-    //   browserVersion: 'latest',
-    //   'bstack:options': {
-    //     os: 'OS X',
-    //     osVersion: 'Big Sur',
-    //   },
-    // },
-    // {
-    //   browserName: 'chrome',
-    //   'bstack:options': {
-    //     accessibility: true,
-    //     deviceName: 'Samsung Galaxy S20',
-    //   },
-    // },
+    }
   ],
 };
 

@@ -21,8 +21,5 @@ describe('BrowserStack Local Testing', () => {
       await productInCart.getText()).match(productOnScreenText), 
       { timeout: 5000 }
     );
-      
-    const summary = await browser.getAccessibilityResultsSummary(); 
-    console.log(`SUMMARY in local test ${JSON.stringify(summary)}`);
   });
 });
